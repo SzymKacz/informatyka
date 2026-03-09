@@ -53,7 +53,6 @@ def get_popular_movies(page: int = 1):
     return response.json()
 
 def get_movie_recommendations_tmdb(movie_id):
-    """Pobiera filmy podobne do danego filmu z API TMDb."""
     url = f"{BASE_URL}/movie/{movie_id}/recommendations?api_key={TMDB_API_KEY}&language=pl-PL"
     try:
         response = requests.get(url, timeout=10)
@@ -62,7 +61,6 @@ def get_movie_recommendations_tmdb(movie_id):
         return {"results": []}
 
 def get_genres():
-    """Pobiera mapę gatunków (id -> nazwa) z TMDb."""
     url = f"{BASE_URL}/genre/movie/list?api_key={TMDB_API_KEY}&language=pl-PL"
     try:
         response = requests.get(url, timeout=10)
