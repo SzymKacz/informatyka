@@ -75,16 +75,6 @@ if not rated_data:
     st.stop()
 
 
-with st.container():
-    c1, c2, c3 = st.columns(3)
-    with c1:
-        st.metric("Twój Profil", f"{len(rated_data)} ocen", "Aktywny")
-    with c2:
-        st.metric("Model Content-Based", "TMDb", "100% Online")
-    with c3:
-        st.metric("Model Collaborative", "SVD", "Wytrenowany")
-
-st.markdown("---")
 
 
 with st.spinner(" Dobieranie filmów do Twojego profilu w toku ....."):
