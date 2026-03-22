@@ -1,0 +1,8 @@
+streamlit
+streamlit-lottie
+pandas
+numpy
+requests
+bcrypt
+scikit-learn
+scipy
